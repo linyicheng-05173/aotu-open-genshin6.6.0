@@ -1,0 +1,22 @@
+{
+    "schemaVersion": 1,
+    "id": "auto_install_genshin",
+    "version": "${version}",
+    "name": "打开自动启动原神",
+    "description": "进游戏自动启动原神！",
+    "authors": ["Anonymous"],
+    "contact": {},
+    "license": "MIT",
+    "icon": "logo.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "com.example.auto_genshin.AutoInstallGenshin"
+        ]
+    },
+    "depends": {
+        "fabricloader": ">=0.16.0",
+        "minecraft": "~26.1.2",
+        "java": ">=25"
+    }
+}
