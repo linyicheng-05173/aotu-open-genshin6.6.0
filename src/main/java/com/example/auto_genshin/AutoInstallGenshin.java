@@ -45,7 +45,8 @@ public class AutoInstallGenshin implements ClientModInitializer {
 
     @Override
     public void onInitializeClient() {
-        final String langCode = getLangCodeSafe();
+        // 统一转小写，避免 options.languageCode 返回 "zh_CN" 等大小写不一致导致匹配失败
+        final String langCode = getLangCodeSafe().toLowerCase();
         final boolean isChinese = "zh_cn".equals(langCode);
 
         new Thread(() -> {
